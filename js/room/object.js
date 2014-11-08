@@ -32,7 +32,7 @@ function object(renderObj, x, y, name, description){
         name : name,
         description : description,
         render : function(renderObj, x, y) {
-            context.fillText(renderObj, block(x), block(y));
+            context.fillText(renderObj, block(x), block(y), blockSize);
         }
     };
 }

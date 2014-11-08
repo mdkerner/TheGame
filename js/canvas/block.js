@@ -4,11 +4,12 @@
  * this is where a "Block" is defined
  */
 
-var blockSize = canvas.width / 100;
 var block = function(blocks){
-    return blocks * blockSize;
+    var b = blocks * blockSize
+    return Math.round(b);
 };
 
 var pixel = function(pixels){
-    return pixels / blockSize;
+    var p = pixels / blockSize;
+    return Math.round(p);
 };

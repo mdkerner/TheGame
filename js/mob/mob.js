@@ -18,7 +18,7 @@ function mob(renderObj, x, y, name, description, health, mobType, stamina, speed
         inventory : inventory,
         skills : skills,
         render : function(renderObj, x, y) {
-            context.fillText(renderObj, block(x), block(y));
+            context.fillText(renderObj, block(x), block(y),blockSize);
         }
     };
 }

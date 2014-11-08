@@ -1,11 +1,12 @@
 
 var canvas = document.getElementById("game-canvas");
 var context = canvas.getContext('2d');
-context.font = "20px Arial";
+var blockSize = canvas.width / 20;
+context.font = blockSize + "px Arial";
 var player = new player(
     "T",
-    30,
-    30,
+    15,
+    15,
     "Toranaga",
     "A large Japanese man",
     100,

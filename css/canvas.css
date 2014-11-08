@@ -2,15 +2,17 @@ body{
     margin-left:5%;
     margin-right:5%;
 }
-
-p{
-    margin:50px;
-    float:left;
-    clear:left;
+.blog-header{
+    font-size:1.2em;
+}
+.blog-date{
+    font-weight: bold;
+}
+.blog-entry{
+    margin-left:10px;
 }
 
 #game-canvas{
     display:block;
-    float:left;
-    margin-left:10%
+    margin:3%;
 }

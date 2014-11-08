@@ -12,9 +12,7 @@ function handleClick(event)
 }
 
 function evaluateClick(position){
-
-    player.y = position.y;
-    player.x = position.x;
+    move(player, position.x, position.y);
 }
 
 function getPosition(event){
