@@ -1,17 +1,31 @@
 /**
  * Created by mdkerner on 10/23/2014.
  */
-canvas.addEventListener("click", handleClick, false);
 
-function handleClick(event)
+var moveIntervalId = -1;
+canvas.addEventListener("mousedown", function(event)
 {
-    var position = getPosition(event);
-    evaluateClick(position);
-}
+    if (moveIntervalId != -1)return;
+    moveIntervalId = setInterval(function(){
+        var position = getPosition(mouse);
+        move(player, position.x, position.y);
+    }, player.speed);
+}, false);
 
-function evaluateClick(position){
-    move(player, position.x, position.y);
-}
+canvas.addEventListener("mouseup", function(event) {
+    if (moveIntervalId === -1)return;
+    clearInterval(moveIntervalId);
+    moveIntervalId = -1;
+}, false);
+
+canvas.addEventListener('mousemove', function(e){
+    mouse.x = e.clientX || e.pageX;
+    mouse.y = e.clientY || e.pageY
+}, false);
+
+
+
+
 
 function getPosition(event){
     var x = event.x;

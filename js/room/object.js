@@ -32,8 +32,8 @@ function object(renderObj, x, y, name, description){
         name : name,
         description : description,
         render : function(obj, x, y) {
-            context.fillText(obj, block(x)+5, block(y)-3, blockSize);
-            context.strokeRect(block(x), block(y-1), blockSize, blockSize);
+            context.fillText(obj, block(x)+5, block(y+1)-3, blockSize);
+            context.strokeRect(block(x), block(y), blockSize, blockSize);
         }
     };
 }

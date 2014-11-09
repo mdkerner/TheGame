@@ -7,6 +7,5 @@ function room(name, description, mobs, objects){
         description : description,
         mobs : mobs != undefined ? mobs : [],
         objects : objects != undefined ? objects : []
-
     };
 }

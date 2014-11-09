@@ -36,23 +36,3 @@ function isValidPosition(x, y){
     }
     return true;
 }
-
-function move2(mob, x, y){
-
-}
-
-function findPath(start, x, y, path){
-    if(start.x == x && start.y == y) return path;
-    if(start.x != x) {
-        start.x = start.x < x ? start.x + 1 : start.x - 1;
-    }
-    if(start.y != y){
-        start.y = start.y < y ? start.y + 1 : start.y - 1;
-    }
-    var next = {
-        x: start.x,
-        y: start.y
-    };
-    path.push(next);
-    return findPath(next, x, y, path);
-}

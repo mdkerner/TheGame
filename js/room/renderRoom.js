@@ -16,9 +16,9 @@ function renderRoom(){
         context.lineWidth = 1;
 
         // set line color
-        context.strokeStyle = '#aaaaaa';
+        context.strokeStyle = lightgrey;
         context.stroke();
-        context.strokeStyle = '#000000'
+        context.strokeStyle = black;
     }
 
     var objects = room.objects;
