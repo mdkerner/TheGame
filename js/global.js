@@ -1,4 +1,4 @@
-
+document.onselectstart=new Function ("return false");
 var canvas = document.getElementById("game-canvas");
 var context = canvas.getContext('2d');
 var blockSize = canvas.width / 20;
