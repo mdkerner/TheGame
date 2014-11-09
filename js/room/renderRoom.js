@@ -1,8 +1,25 @@
 
-function renderRoom(room){
+function renderRoom(){
     //clear room
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.strokeRect(0, 0, canvas.width, canvas.height);
+
+    //make grid
+    for(var i = 0; i < canvas.width / blockSize; i++){
+
+        context.beginPath();
+        context.moveTo(block(i), block(0));
+        context.lineTo(block(i), canvas.height);
+
+        context.moveTo(block(0), block(i));
+        context.lineTo(canvas.width, block(i));
+        context.lineWidth = 1;
+
+        // set line color
+        context.strokeStyle = '#aaaaaa';
+        context.stroke();
+        context.strokeStyle = '#000000'
+    }
 
     var objects = room.objects;
     for(var i = 0; i < objects.length; i++){

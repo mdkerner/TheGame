@@ -7,8 +7,6 @@ function handleClick(event)
 {
     var position = getPosition(event);
     evaluateClick(position);
-
-
 }
 
 function evaluateClick(position){

@@ -6,10 +6,10 @@
 
 var block = function(blocks){
     var b = blocks * blockSize
-    return Math.round(b);
+    return Math.floor(b);
 };
 
 var pixel = function(pixels){
     var p = pixels / blockSize;
-    return Math.round(p);
+    return Math.floor(p);
 };

@@ -17,11 +17,13 @@ function mob(renderObj, x, y, name, description, health, mobType, stamina, speed
         equipment : equipment,
         inventory : inventory,
         skills : skills,
-        render : function(renderObj, x, y) {
-            context.fillText(renderObj, block(x), block(y),blockSize);
+        render : function(obj, x, y){
+            context.fillText(obj, block(x)+5, block(y)-3, blockSize);
+            context.strokeRect(block(x), block(y-1), blockSize, blockSize);
         }
     };
 }
+
 
 var mobType = {
     creature : 'creature',
